@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listivewcustomshape"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dip"
+
+        android:padding="3dip">
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:focusableInTouchMode="false"
+            android:src="@drawable/ic_domain_black_24dp" />
+
+    </LinearLayout>
+
+    <!-- Title Of Location-->
+    <TextView
+        android:id="@+id/textViewActivityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_marginRight="16dp"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toStartOf="@+id/imageView"
+        android:text="Going at Makati Going at Makati with 6 people"
+        android:textColor="#040404"
+        android:textSize="16dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Request pending status -->
+    <TextView
+        android:id="@+id/textView_requestStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_vicinity"
+        android:layout_marginTop="2dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="2 pending"
+        android:textColor="#e76d27"
+        android:textSize="10dip" />
+
+
+    <!-- Request approved status -->
+    <TextView
+        android:id="@+id/textView_requestStatusApproved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_vicinity"
+        android:layout_marginTop="2dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:paddingLeft="60dp"
+        android:text="2 accepted"
+        android:textColor="#3d9128"
+        android:textSize="10dip" />
+
+    <!-- Request reject status -->
+    <TextView
+        android:id="@+id/textView_requestStatusReject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_vicinity"
+        android:layout_marginTop="2dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:paddingLeft="120dp"
+        android:text="1 rejected"
+        android:textColor="#e62f1f"
+        android:textSize="10dip" />
+
+    <!-- address name -->
+    <TextView
+        android:id="@+id/textView_vicinity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewActivityName"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="2dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:paddingLeft="0dp"
+        android:text="39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan Quezon..."
+        android:textColor="#000000"
+        android:textSize="12dip"
+        android:textStyle="normal" />
+
+    <!-- sender name -->
+    <TextView
+        android:id="@+id/textView_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewActivityName"
+        android:layout_marginTop="2dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:paddingLeft="0dp"
+        android:text="39 Maginoo St. Pinyahan Quezon..."
+        android:textColor="#000000"
+        android:textSize="12dip"
+        android:textStyle="normal"
+        android:visibility="gone" />
+
+    <!-- Rightend Ticket id -->
+    <TextView
+        android:id="@+id/textView_invitation_ticketId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/textViewActivityName"
+        android:layout_marginRight="5dip"
+        android:gravity="right"
+        android:text="5:45"
+        android:textColor="#000000"
+        android:textSize="10dip"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+    <!-- Rightend Ticket id -->
+    <TextView
+        android:id="@+id/textView_invitation_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView_invitation_senderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Rightend Arrow -->
+
+
+    <!--Gone-->
+    <!--TODO: this block of code is for storing data on event information-->
+    <TextView
+        android:id="@+id/eventDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/eventTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/eventPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/eventStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/eventEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/eventRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/eventIsAdvance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</RelativeLayout>

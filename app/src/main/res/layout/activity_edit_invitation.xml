@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    tools:context="com.xperiasola.philubiq64wi.navigationdrawerapp.activities.EditInvitation">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <!--Event address information-->
+            <RelativeLayout
+                android:id="@+id/LayoutEventAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/round_shape"
+                android:orientation="horizontal"
+                android:padding="5dip">
+
+                <!--  ListRow Left sied Thumbnail image -->
+                <LinearLayout
+                    android:id="@+id/thumbnail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+
+                    android:padding="3dip">
+
+                    <ImageView
+                        android:id="@+id/list_image"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:focusableInTouchMode="false"
+                        android:contentDescription="@string/contentDescription"
+                        android:src="@drawable/ic_domain_black_24dp" />
+
+                </LinearLayout>
+
+                <!-- Title Of Location-->
+                <TextView
+                    android:id="@+id/textViewActivityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/thumbnail"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:text="@string/event_title"
+                    android:textColor="#040404"
+                    android:textSize="16dip"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+
+                <!-- address name -->
+                <TextView
+                    android:id="@+id/textView_vicinity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewActivityName"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="2dip"
+                    android:layout_toEndOf="@+id/thumbnail"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:paddingEnd="20dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="0dp"
+                    android:text="@string/event_address"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/ic_chevron_right_black_24dp" />
+
+                <!-- sender name -->
+                <TextView
+                    android:id="@+id/textView_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+
+                <!-- Right end Ticket id -->
+                <TextView
+                    android:id="@+id/textView_invitation_ticketId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/textViewActivityName"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/textView_invitation_senderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <!-- Rightend Arrow -->
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LayoutEventAddress"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/round_shape">
+
+
+                <!--switch-->
+                <RelativeLayout
+                    android:id="@+id/layoutSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="start"
+                        android:hint="@string/event_switch"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <Switch
+                        android:id="@+id/event_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center|end"
+                        android:checked="true"
+                        android:padding="10dp"
+                        android:textStyle="normal" />
+
+                    <!--draw line-->
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/event_switch"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="5sp"
+                        android:background="#acacac" />
+
+
+                </RelativeLayout>
+
+
+                <!--Activity title-->
+                <RelativeLayout
+                    android:id="@+id/layoutTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutSwitch">
+
+                    <TextView
+                        android:id="@+id/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start"
+                        android:hint="@string/event_title"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_toEndOf="@id/titleText"
+                        android:layout_toRightOf="@id/titleText"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:gravity="center|end"
+                        android:paddingTop="5dp"
+                        android:text="@string/event_none"
+                        android:textStyle="normal" />
+
+                    <!--draw line-->
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/txtTitle"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="5sp"
+                        android:background="#acacac" />
+                </RelativeLayout>
+
+
+                <!--Date-->
+                <RelativeLayout
+                    android:id="@+id/layoutDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutTitle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start"
+                        android:hint="@string/event_date"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:gravity="center|end"
+                        android:paddingTop="5dp"
+                        android:text="@string/event_none"
+                        android:textStyle="normal" />
+
+                    <!--draw line-->
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/txtDate"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="5sp"
+                        android:background="#acacac" />
+                </RelativeLayout>
+
+
+                <!--Start time-->
+                <RelativeLayout
+                    android:id="@+id/layoutStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutDate">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start"
+                        android:hint="@string/event_time_start"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtStartTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:gravity="center|end"
+                        android:paddingTop="5dp"
+                        android:text="@string/event_none"
+                        android:textStyle="normal" />
+
+                    <!--draw line-->
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/txtStartTime"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="5sp"
+                        android:background="#acacac" />
+                </RelativeLayout>
+
+                <!--End time-->
+                <RelativeLayout
+                    android:id="@+id/layoutEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutStart">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start"
+                        android:hint="@string/event_time_end"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtEndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="end"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:gravity="center|end"
+                        android:paddingTop="5dp"
+                        android:text="@string/event_none"
+                        android:textStyle="normal" />
+
+                    <!--draw line-->
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/txtEndTime"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="5sp"
+                        android:background="#acacac" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layoutRemarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutEnd">
+
+                    <TextView
+                        android:id="@+id/remarkstext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="start"
+                        android:hint="@string/event_remarks"
+                        android:padding="10dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtRemarks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_toEndOf="@id/remarkstext"
+                        android:layout_toRightOf="@id/remarkstext"
+                        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+                        android:gravity="center|end"
+                        android:paddingTop="5dp"
+                        android:text="@string/event_none"
+                        android:textStyle="normal" />
+
+
+                    <!--draw line-->
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/txtRemarks"
+                        android:layout_marginEnd="@dimen/activity_vertical_margin"
+                        android:layout_marginStart="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="5sp"
+                        android:background="#acacac" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
+

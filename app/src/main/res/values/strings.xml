@@ -1,0 +1,125 @@
+<resources>
+    <!--app name-->
+    <string name="app_name">Invite</string>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+    <string name="title_activity_map_test">Map</string>
+    <string name="title_activity_near_by_places">Map</string>
+
+
+    <string name="menu_settings">Settings</string>
+    <string name="str_btn_find">Find</string>
+
+    <!--Google map spinner-->
+    <string-array name="place_type">
+        <item>airport</item>
+        <item>atm</item>
+        <item>bank</item>
+        <item>bus_station</item>
+        <item>church</item>
+        <item>doctor</item>
+        <item>hospital</item>
+        <item>mosque</item>
+        <item>movie_theater</item>
+        <item>restaurant</item>
+    </string-array>
+
+    <!--Google map spinner-->
+    <string-array name="place_type_name">
+        <item>Airport</item>
+        <item>ATM</item>
+        <item>Bank</item>
+        <item>Bus Station</item>
+        <item>Church</item>
+        <item>Doctor</item>
+        <item>Hospital</item>
+        <item>Mosque</item>
+        <item>Movie Theater</item>
+        <item>Restaurant</item>
+    </string-array>
+
+
+    <string name="try_again">Reconnect</string>
+    <string name="set_invite">Yes</string>
+    <string name="cancel_invite">Undo</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Invites</string>
+    <string name="nav_sent">Sent</string>
+    <string name="nav_trash">Trash</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_contacts">Contacts</string>
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_maps">Map</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Sent</item>
+        <item>Trash</item>
+        <item>Notifications</item>
+        <item>Map</item>
+        <item>Contacts</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Bottom dialog-->
+    <string name="dialog_next">Next</string>
+    <string name="dialog_direction">Directions</string>
+
+
+    <!--fragment_event_info-->
+    <string name="event_invited_people">Invited People</string>
+    <string name="event_title_header">Event Information</string>
+    <string name="event_title">Title</string>
+    <string name="event_time_start">Start time</string>
+    <string name="event_time_end">End Time</string>
+    <string name="event_date">Date</string>
+    <string name="event_remarks">Remarks</string>
+    <string name="event_none">None</string>
+    <string name="event_submit">Submit</string>
+
+    <!--custom dialog for accepting/rejecting request-->
+    <string name="event_accept">Accept</string>
+    <string name="event_reject">Decline</string>
+    <string name="event_content">has invited you to join this event.</string>
+    <string name="event_info">January 2, 2018</string>
+    <string name="event_info_note">Make sure be there from 01:10 PM to 5:30 PM.</string>
+    <string name="event_info_thank">Thank you</string>
+    <string name="event_switch">Advance 2 days</string>
+
+    <!--checkbox agreement-->
+    <string name="checkbox_agreement">I agree to the Google Terms of Service and Privacy
+    Policy</string>
+
+    <!--custom dialog box for editting invitation-->
+    <string name="add_user">Add user</string>
+    <string name="event_cancel">Cancel Event</string>
+    <string name="event_edit">Edit Event</string>
+    <string name="close">Close</string>
+
+    <!--Event information edit layout-->
+    <string name="event_address">39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan
+        Quezon...39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan Quezon...</string>
+    <string name="contentDescription"></string>
+</resources>

@@ -1,0 +1,147 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xperiasola.philubiq64wi.navigationdrawerapp.Fragments.EventInfoFragment">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+
+        <!--Title-->
+        <EditText
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="start"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:hint="@string/event_title"
+            android:padding="10dp"
+            android:paddingBottom="10dp"
+            android:textStyle="normal" />
+
+
+        <!--Date-->
+        <RelativeLayout
+            android:id="@+id/layoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start"
+                android:hint="@string/event_date"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textSize="15dip"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:gravity="center|right|right"
+                android:paddingTop="5dp"
+                android:text="@string/event_none"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+
+        <!--Start time-->
+        <RelativeLayout
+            android:id="@+id/layoutStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutDate">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start"
+                android:hint="@string/event_time_start"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:gravity="center|right|right"
+                android:paddingTop="5dp"
+                android:text="@string/event_none"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <!--End time-->
+        <RelativeLayout
+            android:id="@+id/layoutEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutStart">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start"
+                android:hint="@string/event_time_end"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/txtEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:gravity="center|end"
+                android:paddingTop="5dp"
+                android:text="@string/event_none"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <!--Remarks-->
+        <EditText
+            android:id="@+id/txtRemarks"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutEnd"
+            android:gravity="top|start"
+            android:hint="@string/event_remarks"
+            android:isScrollContainer="true"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

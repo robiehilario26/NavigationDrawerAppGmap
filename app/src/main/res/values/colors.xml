@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--original color-->
+    <color name="colorPrimarySplash">#3F51B5</color>
+    <color name="colorPrimary">#4197ec</color>
+    <color name="colorPrimaryDark">#0175bf</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimaryNavigator">#d32f2f</color>
+    <color name="colorPrimaryDarkNavigator">#c72c2c</color>
+    <color name="colorAccentNavigator">#FFFFFF</color>
+
+    <color name="colorDeleteUser">#dd044b</color>
+</resources>

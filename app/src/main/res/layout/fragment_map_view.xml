@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xperiasola.philubiq64wi.navigationdrawerapp.Fragments.MapViewFragment">
+
+    <!--<fragment-->
+        <!--android:id="@+id/mapView"-->
+        <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:context="com.googlemap.googlemap.MapsActivity" />-->
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mapView"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <Spinner
+            android:id="@+id/spr_place_type_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:id="@+id/btn_find"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/spr_place_type_test"
+            android:text="@string/str_btn_find" />
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>

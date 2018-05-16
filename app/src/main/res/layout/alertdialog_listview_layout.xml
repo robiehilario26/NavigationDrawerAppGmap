@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="310dp"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginEnd="@dimen/activity_vertical_margin"
+    android:layout_marginStart="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/round_shape_transparent"
+    android:orientation="vertical"
+  >
+
+    <!--header container-->
+    <LinearLayout
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--Event information-->
+        <TextView
+            android:id="@+id/text_dialog_event_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:paddingLeft="70dp"
+            android:text="@string/event_invited_people"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <!--Icon for viewing invited person-->
+        <ImageView
+            android:id="@+id/icon_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_weight="0.1"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_close_black_24dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_below="@id/header_title"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5.0sp"
+        android:listSelector="@android:color/transparent" />
+</RelativeLayout>

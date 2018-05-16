@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <!--  ListRow Left side Thumbnail image -->
+        <LinearLayout
+            android:id="@+id/location_image"
+            android:layout_width="fill_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/image_location_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/place" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/location_image"
+            android:layout_marginRight="5dip"
+            android:padding="3dip">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/list_image"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/ic_pin_drop_black_24dp" />
+
+        </LinearLayout>
+
+        <!-- Title Of Location-->
+        <TextView
+            android:id="@+id/textViewActivityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toEndOf="@+id/thumbnail"
+            android:layout_toLeftOf="@+id/imageView"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:layout_toStartOf="@+id/imageView"
+            android:text="Sonoma Residence at..."
+            android:textColor="#040404"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <!-- Request pending status -->
+
+
+        <!-- address -->
+        <TextView
+            android:id="@+id/textView_vicinity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewActivityName"
+            android:layout_marginTop="2dip"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:paddingLeft="0dp"
+            android:text="39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan Quezon...39 Maginoo St. Pinyahan Quezon..."
+            android:textColor="#000000"
+            android:textSize="12dip"
+            android:textStyle="normal" />
+
+        <!-- Rightend Ticket id -->
+        <TextView
+            android:id="@+id/textView_invitation_ticketId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/textViewActivityName"
+            android:layout_marginRight="5dip"
+            android:gravity="right"
+            android:text="5:45"
+            android:textColor="#000000"
+            android:textSize="10dip"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textView_invitation_senderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!-- Rightend Arrow -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_chevron_right_black_24dp"
+            android:visibility="gone" />
+
+
+        <!--draw line-->
+        <View
+            android:id="@+id/draw_line"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/textView_vicinity"
+            android:layout_marginTop="15dp"
+            android:background="#c0c0c0" />
+
+
+        <!--Option button-->
+
+        <LinearLayout
+            android:id="@+id/fragment_bottom_sheet_directions"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@id/draw_line"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+           >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/draw_line"
+                android:src="@drawable/ic_directions_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:text="@string/dialog_direction" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_bottom_sheet_save"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@id/draw_line"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fragment_bottom_sheet_directions"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+           >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_bookmark_border_black_24dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:text="@string/dialog_next" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
